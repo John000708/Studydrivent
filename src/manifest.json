@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Studydriven't",
+  "description": "Gives you a direct link to downloads",
+  "author": "john000708",
+  "version": "0.0.1",
+  "action": {
+    "default_icon": "logo_new.png"
+  },
+  "icons": {
+    "128": "128.png",
+    "48": "48.png",
+    "38": "38.png"
+  },
+  "host_permissions": ["*://*.studydrive.net/"],
+  "permissions": ["webRequest"],
+  "content_scripts": [
+    {
+      "js": ["scripts/inject.js"],
+      "matches": ["https://www.studydrive.net/en/doc/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "scripts/background.js"
+  }
+}
