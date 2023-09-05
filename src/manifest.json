@@ -17,7 +17,7 @@
   "content_scripts": [
     {
       "js": ["scripts/inject.js"],
-      "matches": ["https://www.studydrive.net/en/doc/*"]
+      "matches": ["https://www.studydrive.net/*/doc/*"]
     }
   ],
   "background": {
